@@ -1,0 +1,216 @@
+%% LyX 2.3.2-2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,english]{elsarticle}
+\usepackage[T1]{fontenc}
+\pagestyle{headings}
+\usepackage{amsthm}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% specify here the journal
+%\journal{Example: Nuclear Physics B}
+
+% use this if you need line numbers
+%\usepackage{lineno}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\begin{frontmatter}{}
+
+\title{Measurement of electron properties in a tungsten inert gas arc by Thomson Scattering}
+
+\author[Differ]{G.~Ronchi}
+\author[Differ]{M.~Laki}
+\author[Differ]{H. J. van der Meiden}
+\author[Differ]{J. W. M. Vernimmen}
+\author[Differ]{I.G.J. Classen}
+\author[Differ]{M. R. de Baar}
+
+\author[Delft]{M. J. M. Hermans}
+\author[Delft]{I. M. Richardson}
+
+%\ead[url]{http://www.elsevier.com}
+
+%\fntext[fn1]{This is the specimen author footnote.}
+
+%\fntext[fn2]{Another author footnote, but a little more longer.}
+
+%\cortext[cor1]{Corresponding author}
+
+%\cortext[cor2]{Principal corresponding author}
+
+\address[Differ]{DIFFER, Dutch Institute for Fundamental Energy Research, De Zaale 20, 5612 AJ Eindhoven, the Netherlands}
+
+\address[Delft]{Department of Material Science & Engineering, Delft University of Technology, Mekelweg 2, 2628 CD, The Netherlands}
+
+\begin{abstract}
+A Tungsten–inert gas (TIG) welding setup is constructed to allow for detailed experimental exploration of the plasma properties of the dense low temperature plasma of a TIG arc. At different arc conditions Thomson scattering is performed to determine 3D profiles of electron temperature ($T_e(r,z)$) and the electron density ($n_e(r,z)$). The influence of Laser induced heating by inverse Bremsstrahlung is also investigated. %Result? Heating influence? Resulting accuracy?    
+
+\end{abstract}
+%\begin{keyword}
+%quadruple exiton \sep polariton \sep WGM \PACS 71.35.-y \sep 71.35.Lk
+%\sep 71.36.+c \MSC[2008]23-557
+%\end{keyword}
+
+\end{frontmatter}{}
+\makeatletter
+\def\ps@pprintTitle{%
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@oddfoot
+}
+\makeatother
+
+
+\section{Instroduction}
+
+A TIG arc is an electric arc ignited between a lanthanated tungsten cathode and a workpiece, the anode. A shielding gas that is passed through a nozzle surrounding the cathode, to protect the cathode from oxidizing. In this work, we used pure argon as a shielding gas. The main schematic is shown in Fig (1). TIG arcs are widely used in industrial applications for metal construction purposes. The ultimate goal of this research is a better understanding of the correlation between plasma condition and welding joint quality. 
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=1.7]{universe}
+\caption{Schematic diagram of a TIG welding process}
+\label{fig:universe}
+\end{figure}
+ 
+
+Impurities and specifically metal vapour from the cathode or weld pool surface increases the electrical conductivity such that the plasma conducts already at 0.4 eV, while for pure argon this value is about 0.6 eV; metals have in general a lower ionization energy relative to that of argon [Murphy, 2016 Modeling]. Moreover, those metal vapours cause radiation losses with multiple orders of magnitude. In general the plasma can conduct the current over a larger area (impurities in the colder edge of the arc cause as well good electrical conductivity), i.e. broadening of power deposition profile. This means that in general the weld depth is decreased significantly due to those effects. If the metal vapour originates from the cathode plasma at the axis of the arc will be cooled [Murphy, 2016 Modeling]. For helium TIG arcs the heat flux is in general significant higher than that of an argon arc. The phenomena described here demonstrate the complicated interaction between arc and electrodes and shows the importance of this research.  
+
+In this experiment the focus is on the pure TIG argon arc, the influence of the metal vapour or other impurities from the anode can be neglected because the copper anode is water cooled and the lanthanated tungsten cathode does not melt.  
+
+The electron density ($n_e$) and temperature ($T_e$) distribution in the arc determine the current density through the electrical conductivity [8], thus accurate determined temperature profiles allow calculation of the heat flux profile [7]. Other phenomena like the magnetic pinch effect, driven by the J×B force [8], results in a higher current density in the plasma region close to the cathode tip, i.e. from anode to cathode the radius of $T_e(r)$ and $n_e(r)$ profile is expected to narrow down. 
+
+A variety of TIG experiments were carried out, wherein Thomson scattering was used for $T_e$ and $n_e$ determination [ref1, ref2, ref3, ref4], one of the challenges here was the high stray light level. In this experiment we used a Thomson Scattering system utilized with a simple but efficient stray light suppression system based on a blocking strip at the intermediate image located just before the detector (ICCD camera) of a spectrometer [4]. Moreover, this work comprises detailed measurements of 3D electron temperature and electron density profiles of the arc from cathode till anode. The experimental exploration of the arc properties will allow for the comparison with theoretical models [2].
+
+This paper can be seen as an exploration of the electron properties, while in the follow up of the experiment the focus will be on the ion properties using a recently developed Collective Thomson scattering system [apl cts] for direct and local determination of the ion temperature, plasma velocity and impurity flux.  
+
+In Sec 2 the TS theory will be described, including analysis, followed by estimates for plasma heating caused by laser induced inverse Bremsstrahlung given in Sec. 3. In Sec. 4 results will be reported finalized with conclusions and an outlook in Sec. 5. 
+
+\section{Thomson Scattering}
+
+In principle, Thomson scattering is the process of acceleration of electrons due to an incident electromagnetic wave (with wave vector k0 (laser beam)) and as a consequence emission of radiation with the same frequency as that wave (see Fig.2). Due to the velocity distribution the observer will measure a Doppler shift distribution centered around the laser wavelength; for a Maxwellian plasma Te and ne are determined from the spectral width and the total collected number of photons, respectively [2]. The relationship between scattering vector k and the Debye length is α=1/kλDebye. Here, the size of the differential wave vector k is equal to k=|k|=4π/λ0(sinθ/2) with λ0 being the laser wavelength and θ the scattering angle between the incident wave (k0) and the scattered wave (ks). 
+
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=1.7]{universe}
+\caption{Schematic of Thomson Scattering system}
+\label{fig:universe}
+\end{figure}
+
+
+
+
+
+For incoherent scattering ($\alpha \ll 1$) the position of the electrons uncorrelated, and the scattered spectrum is a direct measurement of the velocity distribution; called electron feature. In this experiment $\alpha>1$, i.e.  the positions of the electrons are correlated with each other. Therefore, this paper will refer to coherent TS instead, the spectrum of the electron feature exhibits collective effects. In this case the spectrum of the ion feature spectrum, scattering of the electrons correlated with the ions, is also present as a superposition of a very narrow peak on the spectrum of then electron feature [5]. 
+
+Because the scale difference in velocity between ions and electrons is large, the Salpeter approximation [11, 12] can be applied describing the so-called TS form factor S(k,) of the observed scattering spectrum as the sum of the electron feature Se and ion feature Si: 
+  S(k,ω)dω≅1/√π Γ_α (x_e )dx_e+Z(α^2/(1+α^2 ))^2  1/√π Γ_β (x_i )dx_i,                                                   (1)
+with xe,i = /e,i   = /kve,i  the normalized wavelength and ve,i =sqrt(2kTe,j/me,i)  the average thermal speed of the particles.
+Here is    〖 Γ〗_ (x_e )=exp⁡(-x_e^2 )/|1+^2 w(x_e )|^2   and〖 Γ〗_ (x_i )=exp⁡(-x_i^2 )/|1+^2 w(x_i )|^2   with β=√(Z(α^2/(1+α^2 ))  T_e/T_i   ) .                              (2)                                          
+Here Z is the effective charge of the ions, the values are obtained from [16] and are in the range of 1-1.2 for these low temperature plasmas. The plasma dispersion function w(xe,i), is tabulated by [17] and is described by a real Rw(xe,i) and the Landau damping term Iw(xe,i):
+                            Rw(x_(e,i) )=1-2x_(e,i)  exp⁡(-x_(e,i)^2 ) ∫_0^(x_(e,i))▒〖exp⁡(p^2 )dp〗                                                             (3)
+               Iw(x_(e,i) )=-√π 〖 x〗_(e,i)  exp⁡(-x_(e,i)^2 )                                                                                           (4)
+Because the spectrometer used for coherent TS cannot resolve the ion feature, we focus on the electron feature Se (Eq. 5), assuming that we will block the central area of the electron feature (see Fig. 3):
+〖                 S〗_e (k,ω)=1/√π   exp⁡(-x_e^2 )/((1+^2 Rw(x_e ))^2+(^2 Iw(x_e ))^2 )                                                                            (5)
+If <<1, the spectrum will resemble a Gaussian shape if the plasma exhibits a Maxwell electron velocity distribution. Te and ne can be obtained from the width and the integral, respectively. 
+
+ 
+Fig. 3: Electron feature spectrum as a function of normalized wavelength xe, for different α values. At 532 nm, scattering angle 90and Te~1.5 eV, the typical full 1/e-width width is ~3.6 nm
+
+For ≥1, the spectrum (Eq. 5, Fig. 3) should show a dip around xe=0, because the denominator becomes large (at xe=0 Rw has the highest value and Iw is zero). 
+
+In Fig. 3 typical spectra (as a function of normalized wavelength xe) are shown that are expected to be measured with TS, assuming ne~5×1022 m-3 and Te~0.8-1.5 eV and a TS scattering angle of 90. Te and ne are determined from the shape of the electron feature, assuming a Maxwellian velocity distribution. 
+
+
+\section{Laser induced Plasma Heating}
+
+In this experiment the laser beam is focussed to a spotsize of about 0.6 mm, which means that for the used laser energy per pulse of max 200 mJ (7 ns) the power density at the scattering volume is about 88 MW/m2. Heating of the electrons by inversed Bremsstrahlung has to be taken into account.
+The most important loss processes for cooling the heated electrons is the energy transfer to heavy particles through electron impact ionization and electron thermal conductivity [Murphy 2004]
+
+Murphy [2002, 2004] used a fluid dynamic model to estimate the laser induced heating, showing that……..maybe not needed
+
+A method often used to check the influence of laser heating is the determination of Te a function of laser energy and to extrapolate, fitting a straight line to zero laser energy. However in [Murphy, 2004] it was shown that method results still in overestimation of Te, because of the non-linear behaviour of the heating.
+
+Nevertheless, because of the very good signal/noise ratio of the TS system, enabling to measure at very low laser power densities, this method is carried out together with a comparison with the results found in [Murphy, 2002 2004].  
+
+First an estimate of the laser induced plasma heating will be give here, using the following equation from [Polamares].
+
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=1.7]{universe}
+\caption{The laser}
+\label{fig:universe}
+\end{figure}
+
+
+
+\sextion{Experimental setup}
+
+The measurements are performed on Tungsten–inert-gas (TIG) welding arc. The arc is generated between a lanthanized tungsten cathode (3.2 mm diameter and 60° conical tip angle) and a water-cooled copper anode under argon atmospheric pressure (P=105 Pa). The cathode-to-anode gap is adjusted to 5mm. Tungsten oxidizes in the presence of oxygen at high temperature. Therefore the cathode has to be protected by a shielding gas that is passed through a nozzle surrounding the cathode. The argon 5 (99.999\% purity) shielding gas is fed into the welding arc with a gas flow rate of 15-25 slm.
+
+A Migatronic TIG Commander 400 AC/DC power supply is used in a DC mode with the current set to typically 150 A. A water-cooled anode is used to prevent the workpiece from melting. Therefore, the momentum transfer across the arc–anode interface can be considered negligible, which means we can focus on the arc properties.
+
+For TS a Spectra Physics laser is used as the workhorse. The laser delivers 0.4 J/pulse at the second harmonic 532 nm at a 10 Hz repetition rate and pulse width of 7 ns FWHM. The beam is expanded to a diameter of 30 mm to reduce the divergence,
+
+ An approx. 15 m long laser beam line equipped with multilayer mirrors directs the laser beam from a laser room to the welding vessel, and a 1.5m plano-convex lens focusses the beam to a spot size of about 0.5 mm in the plasma center (Fig. 5). The stray light originating from mirrors and lens is collimated by apertures. The collimated stray light and laser beam itself is dumped in a metal dump tube. The scattered light is detected at a 90o angle or a backward scattering angle of max 140o. To reduce the amount of plasma light a short detection window of 30 ns is used and a bandpass filter between 515 and 545 nm) is placed at the spectrometer entrance (See Fig. 6). The detection branch of the TS system incorporates a viewing lens (AF Nikkor 135 mm focal length, f/2, magnification~0.5) at a scattering angle of 900 - 1400, which collects Doppler broadened scattered light and images the ~5 mm long laser chord onto a linear fiber array. Furthermore,  the light is relayed by the fiber bundle to the input of a transmission grating spectrometer. (Spectral range of 17.8nm, the spectral resolution close to <0.1 nm and equipped with a PIMAX1300 ICCD camera. The laser beam line is configured such, that TS and CTS can be performed simultaneously. At atmospheric pressure, the contribution from Rayleigh scattering will be extremely high.
+
+ 
+Fig. 6  Schematic of the spectrometer.
+
+
+
+Therefore, a narrow mask (1 mm) was placed in front of the camera (Fig. 6) to block most of the Rayleigh and stray light. Rayleigh scattering will be performed on a separate low-pressure vessel to calibrate the absolute sensitivity of the TS system.  
+
+The CTS laser system is based on the second harmonic of an injection-seeded Nd: YAG laser (Continuum DLS 8000): wavelength 532 nm,   20 Hz repetition rate, pulse width 7 ns  FWHM, max 1 J/pulse, and a linewidth of 0.3 pm. For the CTS detection branch, the spectral range will be ~0.5 nm and spectral resolution <5 pm. The spectrometer will be equipped with an ICCD camera and will be synchronized with the Q-witch of the laser.
+
+
+MINIMUM MEASSURABLE TE 0.2 eV???????????  (Kunfiled it was 0.6 eV………..
+
+3. RESULTS
+TS measurement were performed in the argon arc at 5 different plasma currents and an argon gas flow of x slm: x A, x1 A,……..
+In Fig. …..a typical spectrum is shown 
+
+\section{Discussion and outlook}
+
+Before summer 2018, TS measurements will be performed in the welding arc. A challenge will be the high Rayleigh contribution, that will be superposed on the spectrum of the electron feature. Because in the past, a suppression of a factor >103 was found by deploying the mentioned mask, it is expected that a relatively clean electron feature can be measured.
+
+For CTS, planned in the fall of 2018, the required high spectral resolution is a challenge as well as the high Rayleigh contribution. Different detector configurations are being considered. 
+
+Electron heating due to inverse bremsstrahlung …
+Possible smoothing effects due to te gradients (caused by this heating) and smoothing effect due to the rise of Te during the laser pulse [Murphy 2004]
+The uncertainties of measured ne, Te and velocities are expected to be approximately 10%, if heating effects can be suppressed. 
+
+\section{References}
+
+[1]	Murphy, Anthony B., and Hunkwan Park. "Modeling of Thermal Plasma Processes: The Importance of Two‐Way Plasma‐Surface Interactions." Plasma Processes and Polymers 14, no. 1-2 (2017).
+
+[2]Tanaka, Manabu, and J. J. Lowke. "Predictions of weld pool profiles using plasma physics." Journal of Physics D: Applied Physics 40.1 (2006): R1.
+
+[3] Snyder, S. C., et al. "Electron-temperature and electron-density profiles in an atmospheric-pressure argon plasma jet." Physical Review E 50.1 (1994): 519.
+
+[4]Van der Meiden, H. J., et al. "Collective Thomson scattering system for determination of ion properties in a high flux plasma beam." Applied Physics Letters 109.26 (2016): 261102.
+
+[5]Van Der Meiden, H. J., et al. "Advanced Thomson scattering system for high-flux linear plasma generator." Review of Scientific Instruments 83.12 (2012): 123505.
+
+[6]Murphy, Anthony B. "The effects of metal vapour in arc welding." Journal of Physics D: Applied Physics 43.43 (2010): 434001.
+
+[7]	Wu, C. S., M. Ushio, and M. Tanaka. "Analysis of the TIG welding arc behavior." Computational Materials Science 7, no. 3 (1997): 308.
+
+[8]	Lowke, J. J., M. Tanaka, and M. Ushio. "Mechanisms giving increased weld depth due to a flux." Journal of physics D: applied physics 38.18 (2005): 3438.
+
+[9] Evans, D. E., and J. Katzenstein. "Laser light scattering in laboratory plasmas." Reports on Progress in Physics 32, no. 1 (1969): 207.
+
+
+\end{document}
